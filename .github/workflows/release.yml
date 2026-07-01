@@ -24,10 +24,9 @@ jobs:
           set -euo pipefail
           xcodebuild \
             -project MacAuthenticator.xcodeproj \
-            -target MacAuthenticator \
+            -scheme MacAuthenticator \
             -configuration Release \
             -derivedDataPath build \
-            -destination "generic/platform=macOS" \
             build \
             CODE_SIGN_IDENTITY="-" \
             CODE_SIGNING_ALLOWED=YES
