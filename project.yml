@@ -1,6 +1,7 @@
 name: MacAuthenticator
 options:
   bundleIdPrefix: com.macauthenticator
+  objectVersion: 56
   deploymentTarget:
     macOS: "13.0"
 
