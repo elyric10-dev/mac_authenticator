@@ -26,7 +26,6 @@ No subscriptions. No sync servers. No "trust us with your secrets." Just codes w
 <p align="center">
   <img src="docs/screenshots/accounts.png" alt="Live TOTP codes with countdown timers" width="360">
   &nbsp;&nbsp;
-  <img src="docs/screenshots/export.png" alt="Export accounts as QR codes" width="360">
 </p>
 
 <p align="center">
