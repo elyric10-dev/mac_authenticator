@@ -1,0 +1,42 @@
+name: MacAuthenticator
+options:
+  bundleIdPrefix: com.macauthenticator
+  deploymentTarget:
+    macOS: "13.0"
+
+settings:
+  base:
+    SWIFT_VERSION: "5.0"
+    MARKETING_VERSION: "1.0"
+    CURRENT_PROJECT_VERSION: "1"
+    ENABLE_HARDENED_RUNTIME: YES
+    CODE_SIGN_STYLE: Automatic
+
+targets:
+  MacAuthenticator:
+    type: application
+    platform: macOS
+    deploymentTarget: "13.0"
+    sources:
+      - path: MacAuthenticator
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.macauthenticator.app
+        PRODUCT_NAME: MacAuthenticator
+        INFOPLIST_FILE: MacAuthenticator/Info.plist
+        CODE_SIGN_ENTITLEMENTS: MacAuthenticator/MacAuthenticator.entitlements
+        ASSETCATALOG_COMPILER_APPICON_NAME: AppIcon
+        GENERATE_INFOPLIST_FILE: NO
+        # Menu bar only app — no Dock icon, no main window/menu bar at top.
+        LSUIElement: YES
+    info:
+      path: MacAuthenticator/Info.plist
+      properties:
+        CFBundleName: MacAuthenticator
+        CFBundleDisplayName: Authenticator
+        CFBundleShortVersionString: "1.0"
+        CFBundleVersion: "1"
+        LSMinimumSystemVersion: "13.0"
+        LSUIElement: true
+        NSHumanReadableCopyright: "Personal use."
+        NSFaceIDUsageDescription: "Authenticator uses Touch ID to protect access to your 2FA codes."

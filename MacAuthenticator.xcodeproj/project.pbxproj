@@ -1,0 +1,438 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		0FBDA2C4E9AD50B1869A2133 /* QRImageDecoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C3236E21AB32C561A464218 /* QRImageDecoder.swift */; };
+		166B48DB9440C20AB330F293 /* OTPAuthURIParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71315453E006EA7AC069BA02 /* OTPAuthURIParser.swift */; };
+		212FD9DDA91579F58D686170 /* OTPAuthURIBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E956F75993B5EF71BA6072A /* OTPAuthURIBuilder.swift */; };
+		2A74AC2CEE6429197562A431 /* GoogleMigrationParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82CB6968C37111F9B57B323D /* GoogleMigrationParser.swift */; };
+		30817B445B0B61A43B14516B /* GoogleMigrationExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 375CAB9084489FFFED9A60C2 /* GoogleMigrationExporter.swift */; };
+		31D19B37645A71EBA7E017FD /* TickingClock.swift in Sources */ = {isa = PBXBuildFile; fileRef = 753CBA0EEF065B6F79239235 /* TickingClock.swift */; };
+		35F3C6C256C272940EDB68AF /* PasteboardImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67953C4FB17FEEBE0DD555AD /* PasteboardImage.swift */; };
+		425AD0DCDBADF8652DD19AB2 /* AccountExporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C8F7B711E139B230C19767 /* AccountExporter.swift */; };
+		57F5B4545B94F564995CD2FA /* AppTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04E725C8F2CDBED2C71B18D7 /* AppTheme.swift */; };
+		59B5E4BA8BC453B0FBC1E2CE /* Base32.swift in Sources */ = {isa = PBXBuildFile; fileRef = F88E426C0A728D4651BF9BEA /* Base32.swift */; };
+		665B16C782829E0828957A7C /* TOTPGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 89136A6A3A72C02121F63836 /* TOTPGenerator.swift */; };
+		748FFE0384F7B4D3276FB2D6 /* CountdownRing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6EA0D2353CFBA9E790B28918 /* CountdownRing.swift */; };
+		7C7FF4ADCD72477A4F59E249 /* OTPAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67CF878DCF7C06EEF225F0D9 /* OTPAccount.swift */; };
+		89D77544B8205E2F12AB45E7 /* MacAuthenticatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633FE060D7F4ED1D7E00D6E4 /* MacAuthenticatorApp.swift */; };
+		8E42A7E23B5C045EF3C26872 /* OTPImporter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3DA3623B123D49CE701CEA0 /* OTPImporter.swift */; };
+		9071F71AC4D665BE6497A20B /* AccountStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82597165B741C3041CC543CA /* AccountStore.swift */; };
+		976755879AFCB735A9653A26 /* MenuBarContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 41C39607AC9E2F91D7BF75D3 /* MenuBarContentView.swift */; };
+		A942E3E0EE50F912A78BDD8D /* AccountRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19D064BF7BFB4758877F286E /* AccountRow.swift */; };
+		BC9DCB334A2B9026E7AA9CEA /* BiometricAuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9AE3E54F65D307760CAA36AA /* BiometricAuthService.swift */; };
+		C789F5CB341DDE028ED9D6F4 /* AppController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B96D25FDC04FA36109F6AC0 /* AppController.swift */; };
+		DB2F70E8194C6E8EEDF989E8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D12F5673DF3B8D6ECB11D5D7 /* Assets.xcassets */; };
+		E5CEA8045F1CB6BF2F61BE8C /* UnlockView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C1F982676B983B2B956611 /* UnlockView.swift */; };
+		E7FC6901940518C092B1EB7E /* AddAccountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D5016F70863ACCB3143FE89 /* AddAccountView.swift */; };
+		F302A8A4FCF03E5DC0E50C79 /* QRCodeGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 51B67A8AEB7FFAEE5CB9CE8D /* QRCodeGenerator.swift */; };
+		F3D7A5DB69595EF0E8B71C29 /* StatusBarMenuController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B51E3C3DB9ED72CAF7BF44A /* StatusBarMenuController.swift */; };
+		F4710FC20F2A743DDA7F1AC6 /* SecretStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 777149A1DEFAF7C26008EC4F /* SecretStorage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		04E725C8F2CDBED2C71B18D7 /* AppTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppTheme.swift; sourceTree = "<group>"; };
+		0B51E3C3DB9ED72CAF7BF44A /* StatusBarMenuController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusBarMenuController.swift; sourceTree = "<group>"; };
+		19D064BF7BFB4758877F286E /* AccountRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountRow.swift; sourceTree = "<group>"; };
+		1B96D25FDC04FA36109F6AC0 /* AppController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppController.swift; sourceTree = "<group>"; };
+		219A0A37C9FCCED4E4DF2C20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		32C1F982676B983B2B956611 /* UnlockView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UnlockView.swift; sourceTree = "<group>"; };
+		375CAB9084489FFFED9A60C2 /* GoogleMigrationExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMigrationExporter.swift; sourceTree = "<group>"; };
+		41C39607AC9E2F91D7BF75D3 /* MenuBarContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuBarContentView.swift; sourceTree = "<group>"; };
+		45C8F7B711E139B230C19767 /* AccountExporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountExporter.swift; sourceTree = "<group>"; };
+		4C3236E21AB32C561A464218 /* QRImageDecoder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRImageDecoder.swift; sourceTree = "<group>"; };
+		51B67A8AEB7FFAEE5CB9CE8D /* QRCodeGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QRCodeGenerator.swift; sourceTree = "<group>"; };
+		633FE060D7F4ED1D7E00D6E4 /* MacAuthenticatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MacAuthenticatorApp.swift; sourceTree = "<group>"; };
+		635A9694EBD0E0D24B194894 /* MacAuthenticator.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = MacAuthenticator.entitlements; sourceTree = "<group>"; };
+		67953C4FB17FEEBE0DD555AD /* PasteboardImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PasteboardImage.swift; sourceTree = "<group>"; };
+		67CF878DCF7C06EEF225F0D9 /* OTPAccount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAccount.swift; sourceTree = "<group>"; };
+		6EA0D2353CFBA9E790B28918 /* CountdownRing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountdownRing.swift; sourceTree = "<group>"; };
+		71315453E006EA7AC069BA02 /* OTPAuthURIParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthURIParser.swift; sourceTree = "<group>"; };
+		753CBA0EEF065B6F79239235 /* TickingClock.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TickingClock.swift; sourceTree = "<group>"; };
+		777149A1DEFAF7C26008EC4F /* SecretStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecretStorage.swift; sourceTree = "<group>"; };
+		7D5016F70863ACCB3143FE89 /* AddAccountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddAccountView.swift; sourceTree = "<group>"; };
+		82597165B741C3041CC543CA /* AccountStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountStore.swift; sourceTree = "<group>"; };
+		82CB6968C37111F9B57B323D /* GoogleMigrationParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleMigrationParser.swift; sourceTree = "<group>"; };
+		89136A6A3A72C02121F63836 /* TOTPGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TOTPGenerator.swift; sourceTree = "<group>"; };
+		9AE3E54F65D307760CAA36AA /* BiometricAuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BiometricAuthService.swift; sourceTree = "<group>"; };
+		9E956F75993B5EF71BA6072A /* OTPAuthURIBuilder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPAuthURIBuilder.swift; sourceTree = "<group>"; };
+		A3DA3623B123D49CE701CEA0 /* OTPImporter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OTPImporter.swift; sourceTree = "<group>"; };
+		B3A6CE861CF0EFA86A2AFF30 /* MacAuthenticator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MacAuthenticator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D12F5673DF3B8D6ECB11D5D7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F88E426C0A728D4651BF9BEA /* Base32.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Base32.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXGroup section */
+		229BAFF66D9625F626DA7FC9 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				67CF878DCF7C06EEF225F0D9 /* OTPAccount.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		283E1C6F83D50D5FD2076158 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				45C8F7B711E139B230C19767 /* AccountExporter.swift */,
+				82597165B741C3041CC543CA /* AccountStore.swift */,
+				1B96D25FDC04FA36109F6AC0 /* AppController.swift */,
+				F88E426C0A728D4651BF9BEA /* Base32.swift */,
+				9AE3E54F65D307760CAA36AA /* BiometricAuthService.swift */,
+				375CAB9084489FFFED9A60C2 /* GoogleMigrationExporter.swift */,
+				82CB6968C37111F9B57B323D /* GoogleMigrationParser.swift */,
+				9E956F75993B5EF71BA6072A /* OTPAuthURIBuilder.swift */,
+				71315453E006EA7AC069BA02 /* OTPAuthURIParser.swift */,
+				A3DA3623B123D49CE701CEA0 /* OTPImporter.swift */,
+				67953C4FB17FEEBE0DD555AD /* PasteboardImage.swift */,
+				51B67A8AEB7FFAEE5CB9CE8D /* QRCodeGenerator.swift */,
+				4C3236E21AB32C561A464218 /* QRImageDecoder.swift */,
+				777149A1DEFAF7C26008EC4F /* SecretStorage.swift */,
+				0B51E3C3DB9ED72CAF7BF44A /* StatusBarMenuController.swift */,
+				753CBA0EEF065B6F79239235 /* TickingClock.swift */,
+				89136A6A3A72C02121F63836 /* TOTPGenerator.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		4E2C8457B9AA8F5570F290F5 /* MacAuthenticator */ = {
+			isa = PBXGroup;
+			children = (
+				D12F5673DF3B8D6ECB11D5D7 /* Assets.xcassets */,
+				219A0A37C9FCCED4E4DF2C20 /* Info.plist */,
+				635A9694EBD0E0D24B194894 /* MacAuthenticator.entitlements */,
+				633FE060D7F4ED1D7E00D6E4 /* MacAuthenticatorApp.swift */,
+				229BAFF66D9625F626DA7FC9 /* Models */,
+				283E1C6F83D50D5FD2076158 /* Services */,
+				B22FB03ED2D782D152C3DB86 /* Views */,
+			);
+			path = MacAuthenticator;
+			sourceTree = "<group>";
+		};
+		7F094C213A32C16D2A8A29B0 = {
+			isa = PBXGroup;
+			children = (
+				4E2C8457B9AA8F5570F290F5 /* MacAuthenticator */,
+				A7AE703366412226A876CC5C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		A7AE703366412226A876CC5C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				B3A6CE861CF0EFA86A2AFF30 /* MacAuthenticator.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		B22FB03ED2D782D152C3DB86 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				19D064BF7BFB4758877F286E /* AccountRow.swift */,
+				7D5016F70863ACCB3143FE89 /* AddAccountView.swift */,
+				04E725C8F2CDBED2C71B18D7 /* AppTheme.swift */,
+				6EA0D2353CFBA9E790B28918 /* CountdownRing.swift */,
+				41C39607AC9E2F91D7BF75D3 /* MenuBarContentView.swift */,
+				32C1F982676B983B2B956611 /* UnlockView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		A48F33888662589DD785910E /* MacAuthenticator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B6EDC383B533FEA012C7760 /* Build configuration list for PBXNativeTarget "MacAuthenticator" */;
+			buildPhases = (
+				3CBED9CEBE453F92A63E3C8B /* Sources */,
+				CB0429EB9E4A77201AAC8CFC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MacAuthenticator;
+			packageProductDependencies = (
+			);
+			productName = MacAuthenticator;
+			productReference = B3A6CE861CF0EFA86A2AFF30 /* MacAuthenticator.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		CCEDFA3B191D6E861C2E28B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					A48F33888662589DD785910E = {
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 8E9647D9357888A83FF5A855 /* Build configuration list for PBXProject "MacAuthenticator" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = 7F094C213A32C16D2A8A29B0;
+			minimizedProjectReferenceProxies = 1;
+			preferredProjectObjectVersion = 77;
+			productRefGroup = A7AE703366412226A876CC5C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				A48F33888662589DD785910E /* MacAuthenticator */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		CB0429EB9E4A77201AAC8CFC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DB2F70E8194C6E8EEDF989E8 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3CBED9CEBE453F92A63E3C8B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				425AD0DCDBADF8652DD19AB2 /* AccountExporter.swift in Sources */,
+				A942E3E0EE50F912A78BDD8D /* AccountRow.swift in Sources */,
+				9071F71AC4D665BE6497A20B /* AccountStore.swift in Sources */,
+				E7FC6901940518C092B1EB7E /* AddAccountView.swift in Sources */,
+				C789F5CB341DDE028ED9D6F4 /* AppController.swift in Sources */,
+				57F5B4545B94F564995CD2FA /* AppTheme.swift in Sources */,
+				59B5E4BA8BC453B0FBC1E2CE /* Base32.swift in Sources */,
+				BC9DCB334A2B9026E7AA9CEA /* BiometricAuthService.swift in Sources */,
+				748FFE0384F7B4D3276FB2D6 /* CountdownRing.swift in Sources */,
+				30817B445B0B61A43B14516B /* GoogleMigrationExporter.swift in Sources */,
+				2A74AC2CEE6429197562A431 /* GoogleMigrationParser.swift in Sources */,
+				89D77544B8205E2F12AB45E7 /* MacAuthenticatorApp.swift in Sources */,
+				976755879AFCB735A9653A26 /* MenuBarContentView.swift in Sources */,
+				7C7FF4ADCD72477A4F59E249 /* OTPAccount.swift in Sources */,
+				212FD9DDA91579F58D686170 /* OTPAuthURIBuilder.swift in Sources */,
+				166B48DB9440C20AB330F293 /* OTPAuthURIParser.swift in Sources */,
+				8E42A7E23B5C045EF3C26872 /* OTPImporter.swift in Sources */,
+				35F3C6C256C272940EDB68AF /* PasteboardImage.swift in Sources */,
+				F302A8A4FCF03E5DC0E50C79 /* QRCodeGenerator.swift in Sources */,
+				0FBDA2C4E9AD50B1869A2133 /* QRImageDecoder.swift in Sources */,
+				F4710FC20F2A743DDA7F1AC6 /* SecretStorage.swift in Sources */,
+				F3D7A5DB69595EF0E8B71C29 /* StatusBarMenuController.swift in Sources */,
+				665B16C782829E0828957A7C /* TOTPGenerator.swift in Sources */,
+				31D19B37645A71EBA7E017FD /* TickingClock.swift in Sources */,
+				E5CEA8045F1CB6BF2F61BE8C /* UnlockView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		77EF1C739E81F19FC0ED79B8 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		800607CF8B6852E6FAD7662B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"$(inherited)",
+					"DEBUG=1",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		C75E39193EDFF2B7598DAFE5 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacAuthenticator/MacAuthenticator.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MacAuthenticator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LSUIElement = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macauthenticator.app;
+				PRODUCT_NAME = MacAuthenticator;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		D197A0778D42F83A3CD6A475 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = MacAuthenticator/MacAuthenticator.entitlements;
+				COMBINE_HIDPI_IMAGES = YES;
+				GENERATE_INFOPLIST_FILE = NO;
+				INFOPLIST_FILE = MacAuthenticator/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				LSUIElement = YES;
+				MACOSX_DEPLOYMENT_TARGET = 13.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.macauthenticator.app;
+				PRODUCT_NAME = MacAuthenticator;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B6EDC383B533FEA012C7760 /* Build configuration list for PBXNativeTarget "MacAuthenticator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C75E39193EDFF2B7598DAFE5 /* Debug */,
+				D197A0778D42F83A3CD6A475 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		8E9647D9357888A83FF5A855 /* Build configuration list for PBXProject "MacAuthenticator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				800607CF8B6852E6FAD7662B /* Debug */,
+				77EF1C739E81F19FC0ED79B8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = CCEDFA3B191D6E861C2E28B3 /* Project object */;
+}
