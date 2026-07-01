@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*"
+
+permissions:
+  contents: write
+
+jobs:
+  build-and-release:
+    runs-on: macos-14
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install XcodeGen
+        run: brew install xcodegen
+
+      - name: Build and package
+        run: |
+          chmod +x scripts/install-and-package.sh
+          INSTALL_DIR="$RUNNER_TEMP" ./scripts/install-and-package.sh
+
+      - name: Publish GitHub Release
+        uses: softprops/action-gh-release@v2
+        with:
+          files: dist/MacAuthenticator.zip
+          generate_release_notes: true
+          body: |
+            ## Install
+
+            1. Download **MacAuthenticator.zip** below
+            2. Drag **MacAuthenticator.app** to **Applications**
+            3. **Right-click → Open** the first time (unsigned build — free to distribute, no Apple Developer account needed)
+            4. Click the shield in your menu bar
+
+            ## Requirements
+
+            - macOS 13.0+ (Apple Silicon build from CI)
+
+            ## Notes
+
+            This build is ad-hoc signed. macOS Gatekeeper may ask you to confirm on first launch.
