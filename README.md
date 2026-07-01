@@ -98,9 +98,9 @@ Your keys. Your backups. Your Mac.
 ### Option A — Download a release
 
 1. Grab `MacAuthenticator.zip` from [Releases](https://github.com/elyric10-dev/mac_authenticator/releases)
-2. Drag **MacAuthenticator.app** to **Applications**
-3. Open it — click the **shield** in your menu bar
-4. Scan your fingerprint. Done.
+2. Unzip and drag **MacAuthenticator.app** to **Applications**
+3. **First launch only** — macOS may block the app (see [Gatekeeper troubleshooting](#troubleshooting) with screenshots). Quick fix: **System Settings → Privacy & Security → Open Anyway**
+4. Click the **shield** in your menu bar and unlock with Touch ID
 
 ### Option B — Build it yourself
 
@@ -271,7 +271,33 @@ Exported QR images contain secret keys — treat them like passwords.
 ## Troubleshooting
 
 <details>
-<summary><strong>App won't open?</strong></summary>
+<summary><strong>“MacAuthenticator” Not Opened / Apple could not verify…</strong></summary>
+
+This is normal for unsigned downloads. macOS Gatekeeper is blocking the app — it is **not** detecting malware.
+
+**Fix (pick one):**
+
+1. **Right-click** `MacAuthenticator.app` → **Open** → **Open** (not double-click)
+2. **System Settings → Privacy & Security** → click **Open Anyway**, then confirm **Open Anyway** in the dialog:
+
+<p align="center">
+  <img src="docs/screenshots/gatekeeper-settings.png" alt="Privacy & Security showing Open Anyway for MacAuthenticator" width="480">
+  <br><br>
+  <img src="docs/screenshots/gatekeeper-open-anyway.png" alt="Open MacAuthenticator anyway confirmation dialog" width="360">
+</p>
+
+3. Terminal:
+   ```bash
+   xattr -cr /Applications/MacAuthenticator.app
+   open /Applications/MacAuthenticator.app
+   ```
+
+To avoid this entirely you’d need a paid Apple Developer account ($99/year) and notarization — not required for personal use.
+
+</details>
+
+<details>
+<summary><strong>App won't open (other)</strong></summary>
 
 Right-click **MacAuthenticator.app** → **Open**, or run:
 
