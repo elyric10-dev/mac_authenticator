@@ -20,16 +20,22 @@ No subscriptions. No sync servers. No "trust us with your secrets." Just codes w
 ## Screenshots
 
 <p align="center">
-  <img src="docs/screenshots/accounts.png" alt="Account list with live TOTP codes and countdown timers" width="360">
+  <img src="docs/screenshots/unlock.png" alt="Touch ID unlock before viewing codes" width="420">
+</p>
+
+<p align="center">
+  <img src="docs/screenshots/accounts.png" alt="Live TOTP codes with countdown timers" width="360">
   &nbsp;&nbsp;
   <img src="docs/screenshots/export.png" alt="Export accounts as QR codes" width="360">
 </p>
 
 <p align="center">
-  <em>Live codes at a glance · Export backups whenever you want</em>
+  <img src="docs/screenshots/add-account.png" alt="Add account via QR image or pasted secret" width="420">
 </p>
 
-> Want to add more? Drop PNGs into `docs/screenshots/` and link them here — unlock screen, add-account flow, etc.
+<p align="center">
+  <em>Touch ID gated · Live codes at a glance · Import & export on your terms</em>
+</p>
 
 ---
 

@@ -79,8 +79,6 @@ struct MenuBarContentView: View {
                 }
                 .frame(maxHeight: 380)
             }
-
-            footer
         }
     }
 
@@ -236,19 +234,6 @@ struct MenuBarContentView: View {
         .padding(.vertical, 8)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background(Color.red.opacity(0.1))
-    }
-
-    private var footer: some View {
-        HStack {
-            Image(systemName: "cursorarrow.click.2")
-                .font(.caption2)
-            Text("Right-click shield for menu")
-                .font(.caption2)
-        }
-        .foregroundStyle(Color(nsColor: .secondaryLabelColor))
-        .frame(maxWidth: .infinity)
-        .padding(.vertical, 8)
-        .background(Color(nsColor: .controlBackgroundColor))
     }
 
     private func exportAllMigration() {
