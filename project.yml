@@ -40,3 +40,13 @@ targets:
         LSUIElement: true
         NSHumanReadableCopyright: "Personal use."
         NSFaceIDUsageDescription: "Authenticator uses Touch ID to protect access to your 2FA codes."
+
+schemes:
+  MacAuthenticator:
+    build:
+      targets:
+        MacAuthenticator: all
+    run:
+      config: Debug
+    archive:
+      config: Release
