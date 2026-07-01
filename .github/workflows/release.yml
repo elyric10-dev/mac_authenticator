@@ -4,6 +4,7 @@ on:
   push:
     tags:
       - "v*"
+  workflow_dispatch:
 
 permissions:
   contents: write
@@ -15,17 +16,30 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Install XcodeGen
-        run: brew install xcodegen
+      - name: Select Xcode
+        run: sudo xcode-select -s /Applications/Xcode.app/Contents/Developer
 
       - name: Build and package
         run: |
-          chmod +x scripts/install-and-package.sh
-          INSTALL_DIR="$RUNNER_TEMP" ./scripts/install-and-package.sh
+          set -euo pipefail
+          xcodebuild \
+            -project MacAuthenticator.xcodeproj \
+            -scheme MacAuthenticator \
+            -configuration Release \
+            -derivedDataPath build \
+            -destination "generic/platform=macOS" \
+            build \
+            CODE_SIGN_IDENTITY="-" \
+            CODE_SIGNING_ALLOWED=YES
+          APP_PATH="build/Build/Products/Release/MacAuthenticator.app"
+          test -d "$APP_PATH"
+          mkdir -p dist
+          ditto -c -k --keepParent "$APP_PATH" dist/MacAuthenticator.zip
 
       - name: Publish GitHub Release
         uses: softprops/action-gh-release@v2
         with:
+          tag_name: ${{ github.ref_name }}
           files: dist/MacAuthenticator.zip
           generate_release_notes: true
           body: |
@@ -38,7 +52,7 @@ jobs:
 
             ## Requirements
 
-            - macOS 13.0+ (Apple Silicon build from CI)
+            - macOS 13.0+
 
             ## Notes
 
